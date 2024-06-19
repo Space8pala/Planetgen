@@ -29,29 +29,6 @@ A használt adatbázis változtatását a /views/static mappában a használni k
 
 
 # FELÉPÍTÉS
-## ADATBÁZIS SZERKEZET
-=> PLANETS
-    -id (int)
-    -owner_id (int) [joins USERS.id]
-    -siteside_id (text)
-    -name (text)
-    -description (text)
-    -seed (int)
-=> USERS
-    -id (int)
-    -username (text)
-    -password (text)
-    -email (text)
-    -displayname (text)
-    -bio (text)
-    -joined_on (text)
-    -admin (int)
-=> PLANET_IMAGES
-    -id (int)
-    -p_code (text) [joins PLANETS.siteside_id]
-    -image (text)
-
-
 ## OLDALAK
 ### fejléc
 A fejléc a bejelentkezés és regisztráció oldalakon kívül mindegyik oldalon látható. 
