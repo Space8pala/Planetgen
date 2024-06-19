@@ -71,7 +71,8 @@ Az új osztályoknak egy CSS animáció tulajdonsága van.
 
 Ehhez hasonlóan a mentés gomb is egy a gombnyomásig láthatatlan 'form' elem osztályát változtatja láthatóvá.
 Benne megadható a bolygónak a neve és leírása (ezek közül egyik sem kötelező) két 'input' mezőben.
-Emellett két nem látható mezőben tárolja az alkalmazás a bolygó seed-jét és a kép base64 string-é alakított verzióját
+Emellett két nem látható mezőben tárolja az alkalmazás a bolygó seed-jét és a kép base64 string-é alakított verzióját.
+Ezek mellett a szerver generál egy egyéni, maggal nem összefüggő, 4 jegyű kis- nagybetűkből és számokból álló stringet, ami a bolygónak az alkalmazáson belül használt azonosítója lesz (siteside_id az adatbázisban). Ezt a szerver nem a 'form'-on keresztül továbbítja, hanem a bolygónézet url-jének a végére teszi.
 Beküldés után a át lesz irányítva a bolygónézetbe.
 
 
@@ -88,7 +89,7 @@ Egy bolygóra kattintva át lesz irányítva a bolygónézetbe.
 <BOLYGÓ>
 Itt ismét nagyban látjuk a bolygót, valamint mellette a bolygó megjelenítési nevét (alkalmazás által adott kód, vagy felhasználó által adott név),
 alatta pedig a tulajdonos nevét (felhasználónév vagy becenév). A tulajdonos nevére kattintva át lesz irányítva a felhasználó profiljára.
-Ez alatt jelenik meg a bolygó leirása (ha van), valamint a kódja (alkalmazás által generált, maggal nem összefüggő, 4 jegyű kis- nagybetűkből és számokból álló string)
+Ez alatt jelenik meg a bolygó leirása (ha van), valamint a kódja.
 Ez alatt pedig a főoldalról ismerős forgató gombok, valamint a letöltés.
 
 Ha a be van jelentkezve, és a bolygó az öné, akkor megjelenik még két gomb: bolygó szerkestése, bolygó törlése.
@@ -116,6 +117,21 @@ Meg kell adni egy felhasználónevet, email címet és egy jelszót.
 A program külön követi, hogy foglalt-e a felhasználónév, foglalt-e az email cím, és megeggyezik-e a jelszó a jelszó megerősítéssel.
 
 
+---<A BOLYGÓ GENERÁLÁSRÓL BŐVEBBEN>---
+A bolygó rajzolásához a p5-min JavaScript könyvtárat használom, két for loop segítségével végig iterálom a bolygó rajzfelületeként szolgáló 'canvas' elem pixeleit.
+Egy adott pixel három függvényen kell átmennie mielőtt a 'canvas'-ba beletesszük:
+-Simplex.noise(x,y,z)
+-FractalBrownianMotion(x, y, z, numOctaves)
+-drawNoise3D(size,x,y) //size = canvasz mérete
+
+Az első egyszerű, x y z (azaz 3 dimenzós) koordinátákba eső zaj értékét kapjuk meg, ez a rajzolás fő része.
+A második a térképen látható kisebb részletekért felel. Többször meghívja az első algoritmust ugyanarra a pontra, de más méretű zajjal, majd ezek értékét összeadja (minnél részletesebb a zaj, annál kevesebb lesz az értéke. Ez a videó jól demonstrálja: https://youtu.be/lctXaT9pxA0?si=_Y_Y0cC9fs2m5Bpp&t=490 ).
+A harmadik biztosítja hogy a zaj az Y tengely mentén tükrös legyen. Ennek az elméleti részét a következő oldal magyarázza el jól: https://ronvalstar.nl/creating-tileable-noise-maps
+
+A fentiek alapján egy fekete fehér bolygót kapunk. Ezt a pixelek értéke alapján 5 sávra osztom, és mindegyik sávnak adok egy random színt (valójában csak 3 random szín, mivel a második és az utolsó sáv az elöttinek egy árnyalata lesz)
+
+
 ---<A ZAJ ALGORITMUSRÓL BŐVEBBEN>---
-https://rtouti.github.io/graphics/perlin-noise-algorithm (ez Perlin zajról ír, de a kettő elég hasonló)
+(Minden forrásom a Perlin zajról beszél. Ez azért van, mert a élettartamának nagy részén azt használtam a bolygó generáláshoz. A Simplex-re váltás oka nagyon egyszerű: szebb eredményeket adott. A kettő algoritmus roppant hasonló)
+https://rtouti.github.io/graphics/perlin-noise-algorithm
 https://youtu.be/ikwNrFvnL3g?si=uBiPAAo-m1FQ8Hvp
