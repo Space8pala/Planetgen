@@ -1,15 +1,15 @@
 # Planetgen
 
 
-##ÁLTALÁNOS
+# ÁLTALÁNOS
 A Plangen/Üvegbolygó applikáció fő céja Szimplex zaj felhasználása bolygók generálására.
 Emellett lehetővé teszi a generált bolygók mentését, megosztását.
 
-<ELINDÍTÁS>
+## ELINDÍTÁS
 Az alkalmazás elindításához a main.py fájlt kell lefuttattni, majd az alkalmazás elérhető lesz http://localhost:8080/ - on
 A használt adatbázis változtatását a /views/static mappában a használni kívánt adatbázist "database_used.db"-re nevezésével lehet megváltoztatni.
 
-<FUNKCIÓK>
+## FUNKCIÓK
 -Fiók
     -Regisztráció
     -Bejelentkezés
@@ -18,21 +18,21 @@ A használt adatbázis változtatását a /views/static mappában a használni k
 -Bolygó képének letöltése
 -Mentett bolygók között böngészés
 
-<TECHNIKAI>
+## TECHNIKAI ESZKÖZÖK
 -Bottle (backend)
 -Sqlite (adatbázis)
 
-<HASZNÁLT INTERPRETER>
+## HASZNÁLT INTERPRETER
 -Vs Code
 
-<HASZNÁLT KÖNYVTÁRAK>
+## HASZNÁLT KÖNYVTÁRAK
 -p5-min
 -Stefan Gustavson Simplex java implementációjának js portja
 
 
 
-<FELÉPÍTÉS>
--<ADATBÁZIS SZERKEZET>-
+# FELÉPÍTÉS
+## ADATBÁZIS SZERKEZET
 => PLANETS
     -id (int)
     -owner_id (int) [joins USERS.id]
