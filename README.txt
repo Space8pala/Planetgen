@@ -1,5 +1,3 @@
-
-
     ---<ÁLTALÁNOS>---
 A Plangen/Üvegbolygó applikáció fő céja Szimplex zaj felhasználása bolygók generálására.
 Emellett lehetővé teszi a generált bolygók mentését, megosztását.
