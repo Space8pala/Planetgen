@@ -22,9 +22,6 @@ A használt adatbázis változtatását a /views/static mappában a használni k
 -Bottle (backend)
 -Sqlite (adatbázis)
 
-## HASZNÁLT INTERPRETER
--Vs Code
-
 ## HASZNÁLT KÖNYVTÁRAK
 -p5-min
 -Stefan Gustavson Simplex java implementációjának js portja
