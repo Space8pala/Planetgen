@@ -11,16 +11,17 @@ A használt adatbázis változtatását a /views/static mappában a használni k
     -Regisztráció
     -Bejelentkezés
     -Fiók szerkesztése (felhasználónév, jelszó ...stb)
--Bolygó generálása és mentése, adatinak szerkesztése és törlése
--Bolygó képének letöltése
+-Bolygók
+    -Generálása
+    -Letöltése
+    -Fiókba mentése
+    -Adatai szerkesztése
+    -Törlése
 -Mentett bolygók között böngészés
 
-<TECHNIKAI>
+<TECHNIKAI ESZKÖZÖK>
 -Bottle (backend)
 -Sqlite (adatbázis)
-
-<HASZNÁLT INTERPRETER>
--Vs Code
 
 <HASZNÁLT KÖNYVTÁRAK>
 -p5-min
@@ -76,7 +77,7 @@ Beküldés után a át lesz irányítva a bolygónézetbe.
 
 <BÖNGÉSZÉS>
 Itt az adatbázisban elmentett bolygók között lehet nézelődni. A bolygók sorrendje az adatbázis sorrendje alapján van. 
-Egy esetleges jövőbeli frissítésben lehetséges lenne a bolygó készítés időpontja, vagy név alapján rendezésének megvalósítása (tessék olvasni: most nem volt rá ídőm, de meg fogom csinálni)
+Egy esetleges jövőbeli frissítésben lehetséges lenne a bolygó készítés időpontja, vagy név alapján rendezésének megvalósítása (tessék olvasni: most nem volt rá ídőm, de meg fogom csinálni mert érdekel)
 A böngésző egyszerre csak egy adott mennyiségű bolygót jelenít meg (alap: 12), így több lapra van bontva (pl.: browse/page1).
 A fejlécben szerepel hogy mennyi bolygó látható jelenleg, alatta pedig lehetséges a böngésző lapjai között váltogatni.
 Ezek alatt pedig megjelennek a bolygók. A bolygókat megjelenítési nevük (lásd.: köv bekezdés) és a lementett képük képviseli.
@@ -102,7 +103,6 @@ Ez alatt pedig fel van sorolva a felhasználó bolygói, a böngészés oldalhoz
 
 <BEÁLLÍTÁSOK>
 A felhasználó itt meg tudja változtatni becenevét, leirását, felhasználónevét, email címét és jelszavát.
-
 
 
 <BEJELENTKEZÉS>
