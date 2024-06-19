@@ -114,3 +114,8 @@ Félreírás esetén a program nem figyeli külön, hogy a felhasználónévben,
 Ha még nincs fiókja, akkor itt tud készíteni egyet.
 Meg kell adni egy felhasználónevet, email címet és egy jelszót.
 A program külön követi, hogy foglalt-e a felhasználónév, foglalt-e az email cím, és megeggyezik-e a jelszó a jelszó megerősítéssel.
+
+
+---<A ZAJ ALGORITMUSRÓL BŐVEBBEN>---
+https://rtouti.github.io/graphics/perlin-noise-algorithm (ez Perlin zajról ír, de a kettő elég hasonló)
+https://youtu.be/ikwNrFvnL3g?si=uBiPAAo-m1FQ8Hvp
