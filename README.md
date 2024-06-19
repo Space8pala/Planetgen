@@ -1,7 +1,7 @@
 # Planetgen
 
 
-    <ÁLTALÁNOS>
+##ÁLTALÁNOS
 A Plangen/Üvegbolygó applikáció fő céja Szimplex zaj felhasználása bolygók generálására.
 Emellett lehetővé teszi a generált bolygók mentését, megosztását.
 
@@ -31,7 +31,7 @@ A használt adatbázis változtatását a /views/static mappában a használni k
 
 
 
-    ---<FELÉPÍTÉS>---
+<FELÉPÍTÉS>
 -<ADATBÁZIS SZERKEZET>-
 => PLANETS
     -id (int)
