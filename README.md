@@ -55,14 +55,14 @@ A használt adatbázis változtatását a /views/static mappában a használni k
     -image (text)
 
 
--<OLDALAK>-
-<fejléc>
+## OLDALAK
+### fejléc
 A fejléc a bejelentkezés és regisztráció oldalakon kívül mindegyik oldalon látható. 
 Elnavigálhatunk vele a böngészésre és a főoldalra, valamint bejelentkezés függvényében vagy a regisztráció és bejelentkezés, 
 vagy a profil és beállítások oldalra. Ezek mellett ki is jelentkezhetünk. (A kijelentkezés átírányít a főoldalra)
 
 
-<FŐOLDAL>
+### FŐOLDAL
 A főoldal az első oldal amit látunk az applikáció elindítása után.
 Pár másodperc betöltést követve megjelenik a generált bolygó az oldal közepén.
 A bolygó alatti gombokkal lehetséges azt forgatni, vagy a képet letölteni.
@@ -76,8 +76,7 @@ Benne megadható a bolygónak a neve és leírása (ezek közül egyik sem köte
 Emellett két nem látható mezőben tárolja az alkalmazás a bolygó seed-jét és a kép base64 string-é alakított verzióját
 Beküldés után a át lesz irányítva a bolygónézetbe.
 
-
-<BÖNGÉSZÉS>
+### BÖNGÉSZÉS
 Itt az adatbázisban elmentett bolygók között lehet nézelődni. A bolygók sorrendje az adatbázis sorrendje alapján van. 
 Egy esetleges jövőbeli frissítésben lehetséges lenne a bolygó készítés időpontja, vagy név alapján rendezésének megvalósítása (tessék olvasni: most nem volt rá ídőm, de meg fogom csinálni)
 A böngésző egyszerre csak egy adott mennyiségű bolygót jelenít meg (alap: 12), így több lapra van bontva (pl.: browse/page1).
@@ -86,8 +85,7 @@ Ezek alatt pedig megjelennek a bolygók. A bolygókat megjelenítési nevük (l�
 Bár lehetséges lenne, hogy a bolygókat mag alapján újrageneráljuk, gyakorlatban ez sokkal időigényesebb mint szimplán betölteni a képet.
 Egy bolygóra kattintva át lesz irányítva a bolygónézetbe.
 
-
-<BOLYGÓ>
+### BOLYGÓ
 Itt ismét nagyban látjuk a bolygót, valamint mellette a bolygó megjelenítési nevét (alkalmazás által adott kód, vagy felhasználó által adott név),
 alatta pedig a tulajdonos nevét (felhasználónév vagy becenév). A tulajdonos nevére kattintva át lesz irányítva a felhasználó profiljára.
 Ez alatt jelenik meg a bolygó leirása (ha van), valamint a kódja (alkalmazás által generált, maggal nem összefüggő, 4 jegyű kis- nagybetűkből és számokból álló string)
@@ -98,22 +96,18 @@ Szerkesztéssel a bolygó nevét és leirását lehet változtatni.
 Törléssel, a jelszava megadáse után a bolygót véglegesen törli fiókjáról.
 
 
-<FELHASZNÁLÓ>
+### FELHASZNÁLÓ
 Itt látható a felhasználó beceneve (ha van) és neve, alatta pedig a leirása (ha van) és csatlakozási dátuma.
 Ez alatt pedig fel van sorolva a felhasználó bolygói, a böngészés oldalhoz hasonlóan.
 
-
-<BEÁLLÍTÁSOK>
+### BEÁLLÍTÁSOK
 A felhasználó itt meg tudja változtatni becenevét, leirását, felhasználónevét, email címét és jelszavát.
 
-
-
-<BEJELENTKEZÉS>
+### BEJELENTKEZÉS
 Ha már van a felhasználónak fiókja, a felhasználónév és a jelszó beirásával itt tud bejelentkezni.
 Félreírás esetén a program nem figyeli külön, hogy a felhasználónévben, vagy a jelszóban van-e hiba.
 
-
-<REGISZTRÁCIÓ>
+### REGISZTRÁCIÓ
 Ha még nincs fiókja, akkor itt tud készíteni egyet.
 Meg kell adni egy felhasználónevet, email címet és egy jelszót.
 A program külön követi, hogy foglalt-e a felhasználónév, foglalt-e az email cím, és megeggyezik-e a jelszó a jelszó megerősítéssel.
