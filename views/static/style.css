@@ -1,0 +1,353 @@
+
+body{
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(5, 4, 11);
+    color: white;
+    font-size: 18px;
+}
+
+.container{
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 2px solid rgb(76, 132, 181);
+    border-radius: 5px;
+}
+
+.paddedmain{
+    padding: 20px 40px;
+}
+
+.headerdiv{
+    background-color: rgba(54, 102, 144, 0.388);
+}
+.headerdiv h3{
+    margin-top: 0px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.pagination{
+    text-align: center;
+    margin: 50px;
+}
+
+.pagination .bigbutton{
+    font-size: 1em;
+    height: 40px;
+    margin: 5px;
+}
+
+.pagination .bigbuttondisabled{
+    background-color: none;
+    border:none;
+    font-size: 1em;
+    height: 40px;
+    margin: 5px;
+}
+
+.pagination #active{
+    background-color: black;
+    border: 3px dashed rgb(76, 132, 181);
+}
+
+/*HEADER*/
+header{
+    margin: 0px;
+    height: 70px;
+    background-image: url("UrHatter.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: auto;
+}
+
+header img{
+    float: left;
+    margin: -10px 20px;
+}
+
+header a{
+    position: relative;
+    top: 30%;
+    font-size: 24px;
+}
+
+header a:hover{
+    font-style: italic;
+}
+
+/*NAVIGATION BAR*/
+.navbar ul{
+    list-style-type: none;
+    background-color: rgb(22, 37, 69);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar a{
+    padding: 15px;
+    display: block;
+    text-align: center;
+    height: 100%;
+}
+
+.navbar a:hover{
+    background-color:rgb(42, 62, 105);
+}
+
+.navbar li{
+    float: left;
+}
+
+.dropdown .content{
+    display: none;
+    position: absolute;
+    background-color: rgb(42, 62, 105);
+    min-width: 100px;
+}
+
+.dropdown:hover .content{
+    display: block;
+}
+
+.dropdown .content a:hover{
+    background-color: rgb(68, 85, 119);
+}
+
+/*PLANETSSSS*/
+#pcontainer{
+    display: flex;
+}
+
+#pcontainer canvas{
+    float: left;
+    margin: -1px;
+}
+
+.bigplanetcontainer{
+    display: flex;
+    overflow: hidden;
+    border: 5px solid black;
+    margin: 20px;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+}
+
+.smallplanetcontainer{
+    display: flex;
+    overflow: hidden;
+    border: 5px solid black;
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.rightrotating canvas,.rightrotating img{
+    animation-name: slideright;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    margin: 0px;
+    float: left;
+}
+
+.leftrotating canvas,.leftrotating img{
+    animation-name: slideleft;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    margin: 0px;
+    float: right;
+}
+
+@keyframes slideright {
+    from{transform: translateX(-1100px);}
+    
+}
+
+@keyframes slideleft {
+    to{transform: translateX(-1100px);}
+    
+}
+
+/*FŐOLDAL*/
+.buttonbox{
+    margin-top: 15px;
+    display: flex;
+}
+
+.bigbutton{
+    margin: 10px;
+    padding: 10px;
+    height: 70px;
+    font-size: 1.75em;
+    color: white;
+    background-color: rgb(76, 139, 194);
+    border: 3px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.smallbutton{
+    height: 40px; 
+    padding:5px;
+    margin: 10px;
+    color: white;
+    background-color: rgb(76, 139, 194);
+    border: 3px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bigbuttonhidden{
+    display: none;
+}
+
+.bigbutton:hover{
+    background-color: rgb(107, 170, 225);
+}
+
+.smallbutton:hover{
+    background-color: rgb(107, 170, 225);
+}
+
+.submitdivhidden{
+    display: none;
+}
+
+.submitdivvisible{
+    display: block;
+    position: fixed;
+    background-color: rgb(5, 4, 11);
+}
+
+/*BEJELENTKEZÉS ÉS REGISZTRÁCIÓ*/
+#accrelbody{
+    background-image: url("UrHatter.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: auto;
+    font-size: 14px;
+}
+
+.accrelbox{
+    background-color: rgb(5, 4, 11);;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border: 2px solid rgb(76, 132, 181);
+    border-radius: 5px;
+}
+
+.accrelbox div{
+    width: 350px;
+    height: 70px;
+    margin: 5px;
+    padding: 10px;
+}
+#l1{
+    text-align: center;
+    transform: translateY(-10%);
+}
+.accrelbox input{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*PROFILE*/
+.contenttitle{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.contenttitle h2{
+    border-bottom: 1px dashed white;
+}
+
+.container ul{
+    list-style-type: none;
+    padding:0px;
+    overflow: hidden;
+}
+
+.container li{
+    float: left;
+    padding:20px;
+}
+
+.container ul .pnames{
+    text-align: center;
+    background-color: rgba(54, 102, 144, 0.388);
+    margin-top: 15px;
+}
+
+/*SETTINGS*/
+.container form{
+    margin-left: 25px;
+}
+
+.formgroup label{
+    margin-bottom: 15px;
+}
+
+.darkinput{
+    background-color: rgba(17, 19, 32, 0.589);
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    width: 80%;
+    height: 2em;
+}
+
+.formgroup textarea{
+    width: 80%;
+    height: auto;
+}
+
+.darkinputbutt{
+    background-color: rgba(17, 19, 32, 0.589);
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    height: 2em;
+}
+
+/*PLANET*/
+.flexframe{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.planetinfo{
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.planetinfo .container{
+    min-width: 500px;
+}
+
+.planetprstats{
+    float: left;
+}
+
+.planetprstats dd{
+    font-size: 15px;
+}
