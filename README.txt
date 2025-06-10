@@ -3,8 +3,7 @@ A Plangen/Üvegbolygó applikáció fő céja Szimplex zaj felhasználása bolyg
 Emellett lehetővé teszi a generált bolygók mentését, megosztását.
 
 <ELINDÍTÁS>
-Az alkalmazás elindításához a main.py fájlt kell lefuttattni, majd az alkalmazás elérhető lesz http://localhost:8080/ - on
-A használt adatbázis változtatását a /views/static mappában a használni kívánt adatbázist "database_used.db"-re nevezésével lehet megváltoztatni.
+Az alkalmazás elindításához a main.py fájlt kell lefuttattni, majd az alkalmazás elérhető lesz http://localhost:8080/ - on.
 
 <FUNKCIÓK>
 -Fiók
